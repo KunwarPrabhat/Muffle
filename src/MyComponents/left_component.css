@@ -1,0 +1,32 @@
+.box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: 	#181818;
+    color: white;
+    overflow-x: hidden;
+    transition: width 0.3s ease;
+  }
+  
+  .box:hover {
+    width: 10vw;
+  }
+  
+  .box ul li {
+    padding: 15px 20px;
+  }
+  
+  .box ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  .box ul li a:hover {
+    color: #ff5e23;
+  }
+  

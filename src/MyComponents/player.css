@@ -1,0 +1,142 @@
+.playerContainer {
+  position: fixed;
+  border-top-left-radius: 5%;
+  border-bottom-left-radius: 5%;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 28vw;
+  height: 100%;
+  background-color: 	#181818;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+
+}
+.playerButton img{
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-top: 0px;
+  transition: width 0.2s, height 0.3s;
+  animation: rotateDisk 10s linear infinite;
+}
+
+@keyframes rotateDisk {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.playerControl {
+  margin-top: 6%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.play_pause,
+.back,
+.forward {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #737373;
+  border: 2px solid #ff5e23;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.play_pause:hover {
+  background-color: #ff5e23;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.back,
+.forward {
+  background-color: #737373; 
+  border: 2px solid #46d246; 
+  width: 3rem;
+  height: 3rem;
+}
+
+.back:hover,
+.forward:hover {
+  background-color: #46d246;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* icon styling inside the buttons */
+.play_pause svg,
+.back svg,
+.forward svg {
+  fill: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: auto;
+  display: block;
+}
+
+.progressBarContainer {
+  margin-top: 10%;
+  width: 80%;
+  height: 5px;
+  background-color: #e0e0e0;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #ff0000;
+  border-radius: 50px;
+  transition: width 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .playerContainer {
+    max-width: 10vw;
+    padding: 10px;
+  }
+  .playerButton img {
+    width: 100px;
+    height: 100px;
+  }
+  .playerControl {
+    margin-top: 30%;
+    gap: 10px;
+  }
+  .back,
+  .forward {
+    width: 2rem;
+    height: 2rem;
+  }
+  .play_pause {
+    width: 3rem;
+    height: 3rem;
+  }
+
+}
+@media screen and (max-width: 1024px) {
+  .playerContainer {
+    max-width: 20vw;
+    padding: 15px;
+  }
+  .playerButton img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-top: 0px;
+  }
+}
