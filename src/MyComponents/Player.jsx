@@ -1,3 +1,4 @@
+
 import "./player.css";
 import { TbPlayerPauseFilled } from "react-icons/tb";
 import { IoPlaySkipBackSharp } from "react-icons/io5";
@@ -31,7 +32,7 @@ export default function Music_player() {
       <div className="playerContainer">
         <div className="playerButton">
           <img
-            src="./src/assets/disk.png"
+            src="Muffle/src/assets/Disk.png"
           />
         </div>
         <div className="song_title">
