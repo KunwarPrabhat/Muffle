@@ -5,6 +5,7 @@ import { IoPlaySkipBackSharp } from "react-icons/io5";
 import { IoPlaySkipForwardSharp } from "react-icons/io5";
 import { FaPlay } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import diskimage from '../assets/Disk.png';
 
 export default function Music_player() {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -32,7 +33,7 @@ export default function Music_player() {
       <div className="playerContainer">
         <div className="playerButton">
           <img
-            src="Muffle/src/assets/Disk.png"
+            src={diskimage}
           />
         </div>
         <div className="song_title">
